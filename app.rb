@@ -15,9 +15,6 @@ class App < Sinatra::Base
 
   # Code your final two routes here:
   get '/goodbye/:name' do
-    @medicine = all_the_medicines.select do |medicine|
-      medicine.id == params[:id]
-    end.first
-    erb :'/medicines/show.html'
+    @user_name = params[:name]
   end
 end
